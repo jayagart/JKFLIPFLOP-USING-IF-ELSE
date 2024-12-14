@@ -1,16 +1,28 @@
-# JKFLIPFLOP-USING-IF-ELSE
+# NAME: Jayagar.T
+# REG NO: 24901219
+# EXPERIMENT - 5: JK FLIPFLOP
 
-**AIM:** 
+# AIM:
 
 To implement  JK flipflop using verilog and validating their functionality using their functional tables
 
-**SOFTWARE REQUIRED:**
+# SOFTWARE REQUIRED:
 
 Quartus prime
 
-**THEORY**
+# THEORY:
+A JK Flip-Flop is a type of bistable multivibrator used in digital electronics to store one bit of data. It
+has two inputs, labeled J and K, and two outputs, Q and Q' (complement of Q). The JK Flip-Flop is
+an enhancement of the SR Flip-Flop, designed to eliminate the invalid condition when both inputs
+are high.
+The working of a JK Flip-Flop depends on its input conditions:
+J = 0, K = 0: No change in the output (Q remains as it was). J = 1, K = 0: Sets Q to 1. J = 0, K = 1:
+Resets Q to 0. J = 1, K = 1: Toggles the output (Q switches to the opposite state).
+It is commonly used in counters, shift registers, and memory storage devices. The toggle capability
+makes it highly versatile in sequential logic circuits.
 
-**JK Flip-Flop**
+
+# JK Flip-Flop:
 
 JK flip-flop is the modified version of SR flip-flop. It operates with only positive clock transitions or negative clock transitions. The circuit diagram of JK flip-flop is shown in the following figure.
 
@@ -32,17 +44,52 @@ By using three variable K-Map, we can get the simplified expression for next sta
 
 The maximum possible groupings of adjacent ones are already shown in the figure. Therefore, the simplified expression for next state Qt+1t+1 is Q(t+1)=JQ(t)′+K′Q(t)Q(t+1)=JQ(t)′+K′Q(t)
 
-**Procedure**
+# Procedure:
 
-/* write all the steps invloved */
+1.Launch Quartus on your computer and create a new project:
+Go to File → New Project Wizard.
 
-**PROGRAM**
+Specify the project name, directory, and top-level entity name (e.g., JK_FlipFlop).
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+Create the JK Flip-Flop Circuit and implement the JK Flip-Flop by writing VHDL/Verilog code.
+Go to File → New → Select Verilog File.
 
-**RTL LOGIC FOR FLIPFLOPS**
+Compile the Project
+Click on Processing → Start Compilation.
 
-**TIMING DIGRAMS FOR FLIP FLOPS**
+Fix any syntax or schematic errors if present.
 
-**RESULTS**
+Simulate the Circuit:
+Go to Tools → University Program VWF.
+
+Define the inputs for J, K, and CLK in the waveform editor.
+
+Run the simulation and observe the waveforms.
+
+Verify the Results.
+Compare the simulated results with the truth table for a JK Flip-Flop.
+
+# PROGRAM:
+```
+module JK_FF(q,qb,j,k,clock);
+input j,k,clock;
+output reg q;
+output qb;
+always @(posedge(clock))
+begin
+q <= (j&(~q))+ ((~k)&q);
+end
+assign qb = (~q);
+endmodule
+```
+
+# RTL OUTPUT:
+![Screenshot 2024-12-09 102807](https://github.com/user-attachments/assets/617f4d8d-27c1-4546-8d71-415172cfca21)
+
+
+# OUTPUT WAVEFORM:
+![Screenshot 2024-12-09 111433](https://github.com/user-attachments/assets/6434700c-4435-4132-8219-c90393f85bad)
+
+
+# RESULT:
+Thus the JK flipflop is implemented using verilog and validated using their functional tables
