@@ -1,5 +1,5 @@
-# NAME: Jayagar.T
-# REG NO: 24901219
+## NAME: Jayagar.T
+## REG NO: 24901219
 # EXPERIMENT - 5: JK FLIPFLOP
 
 # AIM:
