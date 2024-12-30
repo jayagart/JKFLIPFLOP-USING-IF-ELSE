@@ -1,6 +1,6 @@
 ## NAME: Jayagar.T
 ## REG NO: 24901219
-# EXPERIMENT - 5: JK FLIPFLOP
+# EXPERIMENT - 5: IMPLEMENTATION OF JK FLIPFLOP
 
 # AIM:
 
@@ -92,4 +92,4 @@ endmodule
 
 
 # RESULT:
-Thus the JK flipflop is implemented using verilog and validated using their functional tables
+Thus the JK flipflop is implemented using verilog and validated using their functional tables, and verified successfully.
